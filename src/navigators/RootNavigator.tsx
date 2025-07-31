@@ -1,12 +1,16 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { ToDoInfoScreen, ToDoListScreen } from '../screens';
+import { OnboardingScreen, ToDoInfoScreen, ToDoListScreen } from '../screens';
 import { RootStackParamList } from './types';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-export function RootNavigator() {
+export function RootNavigator({ initialRoute }) {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{ headerShown: false }}
+      initialRouteName={initialRoute}
+    >
+      <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} />
       <Stack.Screen name="ToDoListScreen" component={ToDoListScreen} />
       <Stack.Screen name="ToDoInfoScreen" component={ToDoInfoScreen} />
     </Stack.Navigator>
