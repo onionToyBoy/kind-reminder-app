@@ -5,7 +5,6 @@
  * @format
  */
 
-import { ActivityIndicator, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import BootSplash from 'react-native-bootsplash';
@@ -25,14 +24,6 @@ function App() {
   }, []);
 
   const initialRoute = useInitialRoute();
-
-  if (!initialRoute) {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <ActivityIndicator size="large" />
-      </View>
-    );
-  }
 
   return (
     <SafeAreaProvider>

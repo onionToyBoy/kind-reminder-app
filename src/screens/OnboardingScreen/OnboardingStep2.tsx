@@ -1,16 +1,16 @@
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
+import { UIScreenContainer } from '../../components';
 
 export const OnboardingStep2 = () => {
   return (
-    <View style={styles.container}>
+    <UIScreenContainer style={styles.container}>
       <Text>STEP 2</Text>
-    </View>
+    </UIScreenContainer>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
